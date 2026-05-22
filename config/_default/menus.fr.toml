@@ -55,6 +55,11 @@ hasChildren = true
   name = "Mentions légales"
   url = "impressum/"
 
+[[main]]
+name = "Télécharger"
+url = "#banner"
+weight = 7
+
 # menu de pied de page
 [[footer]]
 name = "Contact"

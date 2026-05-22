@@ -6,13 +6,14 @@
 
       <!-- start of banner -->
       <section
+        id="banner"
         class="banner bg-cover-bottom has-shapes bg-light-gray has-bg-brash bg-brash-bottom"
         style="background-image: url('{{ $image1.RelPermalink }}')"
         data-aos="fade-in"
         data-aos-delay="150">
         <div class="container h-100">
           <div class="d-block d-lg-flex no-gutters align-items-center h-100">
-            <div class="col-12 col-xl-8 col-lg-8 order-lg-1">
+            <div class="col-12 col-xl-5 col-lg-5 order-lg-1">
               <div
                 class="banner-image has-video-popup has-shapes mb-4 mb-md-5 mb-lg-0"
                 
@@ -47,7 +48,7 @@
                 <div class="shape-sm bg-yellow rounded-circle"></div>
               </div>
             </div>
-            <div class="col-xl-5 col-lg-6 order-lg-0">
+            <div class="col-xl-7 col-lg-7 order-lg-0">
               <h2 class="h1 mb-20">{{ .title | markdownify }}</h2>
               <p>{{ .content | markdownify }}</p>
 
@@ -107,6 +108,20 @@
                     {{ .content | markdownify }}
                   </p>
                 {{ end }}
+              {{ end }}
+
+              {{ if site.Params.app_downloads.enable }}
+                <div class="mt-30 d-flex flex-wrap">
+                  <a href="{{ site.Params.app_downloads.apple_store }}" target="_blank" class="btn btn-dark d-flex align-items-center me-3 mb-3">
+                    <i class="fab fa-apple fa-lg me-2"></i> {{ i18n "app_store" | default "App Store" }}
+                  </a>
+                  <a href="{{ site.Params.app_downloads.play_store }}" target="_blank" class="btn btn-dark d-flex align-items-center me-3 mb-3">
+                    <i class="fab fa-google-play fa-lg me-2"></i> {{ i18n "play_store" | default "Play Store" }}
+                  </a>
+                  <a href="{{ site.Params.app_downloads.web_app }}" target="_blank" class="btn btn-outline-dark d-flex align-items-center mb-3">
+                    <i class="fas fa-globe fa-lg me-2"></i> {{ i18n "web_app" | default "Web App" }}
+                  </a>
+                </div>
               {{ end }}
             </div>
           </div>

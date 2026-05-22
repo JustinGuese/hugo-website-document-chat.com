@@ -65,4 +65,16 @@
   translation: Articles récents
   
 - id: recomended
-  translation: Recomended
+  translation: Recomendé
+
+- id: app_store
+  translation: App Store
+
+- id: play_store
+  translation: Play Store
+
+- id: web_app
+  translation: App Web
+
+- id: downloads
+  translation: Téléchargements

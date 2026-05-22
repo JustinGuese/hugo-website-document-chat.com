@@ -50,6 +50,7 @@
           </ul>
         </div>
       </div>
+      {{ if site.Params.social }}
       <div class="col-lg-2 col-md col-sm-6">
         <div class="ps-0 ps-md-3 mt-5 mt-md-0">
           <h5 class="font-weight-600 mb-20">{{i18n "social_links"}}</h5>
@@ -60,6 +61,19 @@
           </ul>
         </div>
       </div>
+      {{ end }}
+      {{ if site.Params.app_downloads.enable }}
+      <div class="col-lg-3 col-md-6">
+        <div class="ps-0 ps-lg-4 mt-5 mt-lg-0">
+          <h5 class="font-weight-600 mb-20">{{i18n "downloads" | default "Downloads"}}</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="{{ site.Params.app_downloads.apple_store }}" target="_blank"><i class="fab fa-apple me-2"></i> {{ i18n "app_store" | default "App Store" }}</a></li>
+            <li><a href="{{ site.Params.app_downloads.play_store }}" target="_blank"><i class="fab fa-google-play me-2"></i> {{ i18n "play_store" | default "Play Store" }}</a></li>
+            <li><a href="{{ site.Params.app_downloads.web_app }}" target="_blank"><i class="fas fa-globe me-2"></i> {{ i18n "web_app" | default "Web App" }}</a></li>
+          </ul>
+        </div>
+      </div>
+      {{ end }}
       {{ if site.Params.subscription.enable }}
       {{ with site.Params.subscription }}
       <div class="col-lg-4 col-md-6">

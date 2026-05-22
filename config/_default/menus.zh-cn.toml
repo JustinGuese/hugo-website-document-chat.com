@@ -55,6 +55,11 @@ hasChildren = true
   name = "印记"
   url = "impressum/"
 
+[[main]]
+name = "下载"
+url = "#banner"
+weight = 7
+
 # 底部菜单
 [[footer]]
 name = "联系"

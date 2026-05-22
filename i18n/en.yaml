@@ -66,3 +66,15 @@
   
 - id: recomended
   translation: Recomended
+
+- id: app_store
+  translation: App Store
+
+- id: play_store
+  translation: Play Store
+
+- id: web_app
+  translation: Web App
+
+- id: downloads
+  translation: Downloads

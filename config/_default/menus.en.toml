@@ -55,6 +55,11 @@ hasChildren = true
   name = "Imprint"
   url = "impressum/"
 
+[[main]]
+name = "Download"
+url = "#banner"
+weight = 7
+
 # Footer menu
 [[footer]]
 name = "Contact"

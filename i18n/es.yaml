@@ -1,0 +1,80 @@
+- id: quick_links
+  translation: Enlaces Rápidos
+  
+- id: social_links
+  translation: Redes Sociales
+  
+- id: subscribe
+  translation: Suscríbete a nuestro correo
+  
+- id: home
+  translation: Inicio
+  
+- id: all_together
+  translation: Todos Juntos
+  
+- id: name
+  translation: Tu Nombre
+  
+- id: mail
+  translation: Correo de Trabajo
+  
+- id: website
+  translation: Sitio Web de la Empresa
+  
+- id: message
+  translation: ¿Algo más?
+  
+- id: submit
+  translation: Enviar Ahora
+  
+- id: monthly
+  translation: Facturado Mensualmente
+  
+- id: yearly
+  translation: Facturado Anualmente
+  
+- id: month
+  translation: Mes
+  
+- id: year
+  translation: Año
+  
+- id: view_job
+  translation: Ver Listado
+  
+- id: apply
+  translation: Solicitar Empleo
+  
+- id: first_name
+  translation: Nombre
+  
+- id: last_name
+  translation: Apellido
+  
+- id: company
+  translation: Empresa Actual
+
+- id: minute_read
+  translation: Minutos de Lectura
+  
+- id: cv
+  translation: Currículum
+  
+- id: recent_post
+  translation: Artículos Recientes
+  
+- id: recomended
+  translation: Recomendado
+
+- id: app_store
+  translation: App Store
+
+- id: play_store
+  translation: Play Store
+
+- id: web_app
+  translation: Aplicación Web
+
+- id: downloads
+  translation: Descargas

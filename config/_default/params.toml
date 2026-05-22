@@ -80,7 +80,7 @@ enableQQ = false # https://valine.js.org/en/configuration.html#enableQQ
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
 keywords = ["KI Chat", "Dokumente in ChatGPT", "KI DSGVO", "DataFortress.cloud"]
-description = "This is meta description"
+description = "Chat with your documents securely using document-chat.com. Our AI knows your company knowledge, provides citations, and ensures GDPR compliance on German servers."
 author = "DataFortress.cloud"
 image = "images/logo.png"                                       # this image will be used as fallback if a page has no image of its own
 
@@ -129,18 +129,10 @@ expire_days = 2
 content = "Diese Website verwendet Cookies. Durch die weitere Nutzung dieser Website stimmen Sie deren Verwendung zu."
 button = "Ich stimme zu"
 
+[app_downloads]
+enable = true
+play_store = "https://play.google.com/store/apps/details?id=com.datafortress.documentchatapp"
+apple_store = "https://apps.apple.com/us/app/documentchatapp/id6744027406"
+web_app = "https://app.document-chat.com/"
+
 ############################# social site ########################
-[[social]]
-title = "facebook"
-icon = "fab fa-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#" 
-
-[[social]]
-title = "twitter"
-icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#" 
-
-[[social]]
-title = "linkedin"
-icon = "fab fa-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#"
