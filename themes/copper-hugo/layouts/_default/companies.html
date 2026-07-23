@@ -111,16 +111,24 @@
               {{ end }}
 
               {{ if site.Params.app_downloads.enable }}
-                <div class="mt-30 d-flex flex-wrap">
-                  <a href="{{ site.Params.app_downloads.apple_store }}" target="_blank" class="btn btn-dark d-flex align-items-center me-3 mb-3">
-                    <i class="fab fa-apple fa-lg me-2"></i> {{ i18n "app_store" | default "App Store" }}
+                <div class="hero-app-badges d-flex flex-wrap align-items-center gap-3 mt-30">
+                  {{ with site.Params.app_downloads.apple_store }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" class="track-app-click" aria-label="{{ i18n `app_store` | default `App Store` }}">
+                    {{ $b := resources.Get "images/badges/app-store-badge.svg" }}
+                    <img src="{{ $b.RelPermalink }}" alt="{{ i18n `app_store` | default `App Store` }}" height="48" style="height:48px;width:auto;">
                   </a>
-                  <a href="{{ site.Params.app_downloads.play_store }}" target="_blank" class="btn btn-dark d-flex align-items-center me-3 mb-3">
-                    <i class="fab fa-google-play fa-lg me-2"></i> {{ i18n "play_store" | default "Play Store" }}
+                  {{ end }}
+                  {{ with site.Params.app_downloads.play_store }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" class="track-app-click" aria-label="{{ i18n `play_store` | default `Play Store` }}">
+                    {{ $b := resources.Get "images/badges/google-play-badge.svg" }}
+                    <img src="{{ $b.RelPermalink }}" alt="{{ i18n `play_store` | default `Play Store` }}" height="48" style="height:48px;width:auto;">
                   </a>
-                  <a href="{{ site.Params.app_downloads.web_app }}" target="_blank" class="btn btn-outline-dark d-flex align-items-center mb-3">
-                    <i class="fas fa-globe fa-lg me-2"></i> {{ i18n "web_app" | default "Web App" }}
+                  {{ end }}
+                  {{ with site.Params.app_downloads.web_app }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-outline-dark rounded-3 d-inline-flex align-items-center justify-content-center track-app-click" style="height:48px;">
+                    <i class="fas fa-globe me-2"></i>{{ site.Params.app_downloads.web_label | default (i18n "web_app" | default "Web App") }}
                   </a>
+                  {{ end }}
                 </div>
               {{ end }}
             </div>

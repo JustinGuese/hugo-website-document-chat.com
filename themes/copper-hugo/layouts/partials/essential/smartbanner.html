@@ -1,0 +1,19 @@
+{{ with site.Params.smart_app_banner }}{{ if .enable }}
+{{ $ad := site.Params.app_downloads }}
+{{ $icon := "" }}
+{{ with resources.Get "images/logo.png" }}{{ with .Resize "192x192 png" }}{{ $icon = .RelPermalink }}{{ end }}{{ end }}
+<meta name="smartbanner:title" content="{{ .title }}">
+<meta name="smartbanner:author" content="{{ .author }}">
+<meta name="smartbanner:price" content="{{ .price }}">
+<meta name="smartbanner:price-suffix-apple" content=" - App Store">
+<meta name="smartbanner:price-suffix-google" content=" - Google Play">
+<meta name="smartbanner:icon-apple" content="{{ $icon }}">
+<meta name="smartbanner:icon-google" content="{{ $icon }}">
+<meta name="smartbanner:button" content="{{ .button }}">
+<meta name="smartbanner:button-url-apple" content="{{ $ad.apple_store }}">
+<meta name="smartbanner:button-url-google" content="{{ $ad.play_store }}">
+<meta name="smartbanner:enabled-platforms" content="android,ios">
+<meta name="smartbanner:close-label" content="Close">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smartbanner.js/dist/smartbanner.min.css">
+<script src="https://cdn.jsdelivr.net/npm/smartbanner.js/dist/smartbanner.min.js" async></script>
+{{ end }}{{ end }}

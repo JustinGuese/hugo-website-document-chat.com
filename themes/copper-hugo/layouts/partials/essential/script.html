@@ -60,3 +60,18 @@
 
 <!-- progressive web app -->
 {{ partialCached "pwa.html" . }}
+
+<!-- app download click tracking -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.track-app-click').forEach(function (el) {
+      el.addEventListener('click', function () {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'app_download_click',
+          app_download_url: el.href
+        });
+      });
+    });
+  });
+</script>

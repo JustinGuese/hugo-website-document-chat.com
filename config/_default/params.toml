@@ -134,5 +134,15 @@ enable = true
 play_store = "https://play.google.com/store/apps/details?id=com.datafortress.documentchatapp"
 apple_store = "https://apps.apple.com/us/app/documentchatapp/id6744027406"
 web_app = "https://app.document-chat.com/"
+web_label = "Open in Browser"
+
+# Native-style install banner shown only on mobile (iOS/Android auto-detected).
+# Store URLs + icon are reused from [app_downloads] / existing app icons.
+[smart_app_banner]
+enable = true
+title  = "document-chat.com"
+author = "DataFortress.cloud"
+price  = "Free"
+button = "View"
 
 ############################# social site ########################

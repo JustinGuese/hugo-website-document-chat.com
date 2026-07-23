@@ -66,10 +66,22 @@
       <div class="col-lg-3 col-md-6">
         <div class="ps-0 ps-lg-4 mt-5 mt-lg-0">
           <h5 class="font-weight-600 mb-20">{{i18n "downloads" | default "Downloads"}}</h5>
+          <div class="footer-app-badges d-flex flex-wrap align-items-center gap-2 mb-3">
+            {{ with site.Params.app_downloads.apple_store }}
+            <a href="{{ . }}" target="_blank" rel="noopener" class="track-app-click" aria-label="{{ i18n `app_store` | default `App Store` }}">
+              {{ $b := resources.Get "images/badges/app-store-badge.svg" }}
+              <img src="{{ $b.RelPermalink }}" alt="{{ i18n `app_store` | default `App Store` }}" height="36" style="height:36px;width:auto;">
+            </a>
+            {{ end }}
+            {{ with site.Params.app_downloads.play_store }}
+            <a href="{{ . }}" target="_blank" rel="noopener" class="track-app-click" aria-label="{{ i18n `play_store` | default `Play Store` }}">
+              {{ $b := resources.Get "images/badges/google-play-badge.svg" }}
+              <img src="{{ $b.RelPermalink }}" alt="{{ i18n `play_store` | default `Play Store` }}" height="36" style="height:36px;width:auto;">
+            </a>
+            {{ end }}
+          </div>
           <ul class="list-unstyled footer-links">
-            <li><a href="{{ site.Params.app_downloads.apple_store }}" target="_blank"><i class="fab fa-apple me-2"></i> {{ i18n "app_store" | default "App Store" }}</a></li>
-            <li><a href="{{ site.Params.app_downloads.play_store }}" target="_blank"><i class="fab fa-google-play me-2"></i> {{ i18n "play_store" | default "Play Store" }}</a></li>
-            <li><a href="{{ site.Params.app_downloads.web_app }}" target="_blank"><i class="fas fa-globe me-2"></i> {{ i18n "web_app" | default "Web App" }}</a></li>
+            <li><a href="{{ site.Params.app_downloads.web_app }}" target="_blank" class="track-app-click"><i class="fas fa-globe me-2"></i> {{ site.Params.app_downloads.web_label | default (i18n "web_app" | default "Web App") }}</a></li>
           </ul>
         </div>
       </div>
